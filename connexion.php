@@ -9,7 +9,6 @@ require_once "_inc/header.php";
             </div>
             <div class="form-group">
                <input type="password" name="pass" class="form-control" placeholder="password" autocomplete="on">
-               <input type="password" name="pass2" class="form-control" placeholder="password" autocomplete="on">
           </div>
           <div class="form-group">
               <button type="submit" class="btn btn-primary mb-3" name="register">Envoyer</button>

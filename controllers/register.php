@@ -8,6 +8,7 @@ $email = al($_POST['email']);
 $pass = al($_POST['pass']);
 $pass2 = al($_POST['pass2']);
 
+
 if (isset($nom)  && isset($pseudo) && isset($email) && isset($pass) && isset($pass2)) {
 
   $chek = $db->prepare('SELECT nom, pseudo, email, pass, pass2 FROM users where  email = ?');
