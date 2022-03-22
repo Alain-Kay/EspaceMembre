@@ -77,28 +77,28 @@ $title = "inscription";
       }
     }
   ?>
-  <div class="login-form">
-  <form action="controllers/register.php" method="post">
-    <h2 class="text-center">Inscription</h2>
-    <div class="form-group">
-      <input type="text" name="nom" class="form-control " placeholder="nom" autocomplete="on">
-    </div>
-      <div class="form-group">
-      <input type="text" name="pseudo" class="form-control" placeholder="pseudo" autocomplete="on">
-      </div>
-      <div class="form-group">
-      <input type="email" name="email" class="form-control " placeholder="email" autocomplete="on">
-      </div>
-      <div class="form-group">
-      <input type="password" name="pass" class="form-control" placeholder="password" autocomplete="on">
-      <input type="password" name="pass2" class="form-control" placeholder="password" autocomplete="on">
-    </div>
-    <div class="form-group">
-      <button type="submit" class="btn btn-primary mb-3" name="register">Envoyer</button>
-    </div>
-    
+<div class="login-form">
+    <form action="controllers/register.php" method="post">
+        <h2 class="text-center">Inscription</h2>
+            <div class="form-group">
+                <input type="text" name="nom" class="form-control " placeholder="nom" autocomplete="on">
+            </div>
+            <div class="form-group">
+                <input type="text" name="pseudo" class="form-control" placeholder="pseudo" autocomplete="on">
+            </div>
+            <div class="form-group">
+                <input type="email" name="email" class="form-control " placeholder="email" autocomplete="on">
+            </div>
+            <div class="form-group">
+               <input type="password" name="pass" class="form-control" placeholder="password" autocomplete="on">
+               <input type="password" name="pass2" class="form-control" placeholder="password" autocomplete="on">
+          </div>
+          <div class="form-group">
+              <button type="submit" class="btn btn-primary mb-3" name="register">Envoyer</button>
+          </div>
+      </form>
 </div>
 
-  </form>
+  
   
 <?php "_inc/header.php"; ?>
