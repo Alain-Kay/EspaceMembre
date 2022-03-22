@@ -45,19 +45,3 @@ if (isset($nom)  && isset($pseudo) && isset($email) && isset($pass) && isset($pa
     redirection('../inscription.php?erreur=utilisateur_existe');
   }else
     redirection('../inscription.php?erreur=utilisateur_existe');
-// }else 
-//   redirection('../inscription.php?erreur=champ');
-
-
-
-
-
-
-          
-  
-
-  
-
-
-
- // verification du nom

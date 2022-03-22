@@ -1,12 +1,8 @@
-<?php $title = "inscription"; ?>
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-  <meta charset="UTF-8">
-  <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
-  <title><?php $title; ?></title>
-</head>
-<body>
+<?php 
+require_once "_inc/header.php";
+$title = "inscription"; 
+
+?>
   <?php 
     if(isset($_GET['erreur'])){
       $erreur  = htmlspecialchars($_GET['erreur']);
@@ -105,5 +101,4 @@
 
   </form>
   
-</body>
-</html>
+<?php "_inc/header.php"; ?>
