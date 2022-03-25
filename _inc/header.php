@@ -28,14 +28,20 @@
     }
     .btn{
       font-size: 15px; 
-      text-align: center;
+      
     }
 
     .login-form .btn {
         min-height : 30px;
         border-radius : 2px;
+        text-align: center;
     }
     .form-group{
       margin: 15px;
+    }
+    .alert{
+      width: 400px;
+      text-align: center;
+      margin: 50px auto;
     }
   </style>

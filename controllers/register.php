@@ -11,9 +11,8 @@ $pass2 = al($_POST['pass2']);
 
 if (isset($nom)  && isset($pseudo) && isset($email) && isset($pass) && isset($pass2)) {
 
-  $chek = $db->prepare('SELECT nom, pseudo, email, pass, pass2 FROM users where  email = ?');
-  $chek->execute(array($email));
-  $chek->execute(array($pseudo));
+  $chek = $db->prepare('SELECT * FROM users where  email = ? OR pseudo = ?');
+  $chek->execute(array($email, $pseudo));
   $data = $chek->fetch();
   $row = $chek->rowCount();
   if($row == 0 ){

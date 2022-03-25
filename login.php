@@ -9,8 +9,8 @@ if (isset($_GET['login_erreur'])) {
         case 'password':
             ?>
           
-            <div class="alert alert-success">
-                <strong>Erreur: </strong> Email n'est pas valide
+            <div class="alert alert-danger">
+                <strong>Mot de passe incorrect </strong>  
             </div>
             <?php
             break;
@@ -18,8 +18,8 @@ if (isset($_GET['login_erreur'])) {
         case 'email':
             ?>
           
-            <div class="alert alert-success">
-                <strong>erreur: </strong> Mot de passe invalide
+            <div class="alert alert-danger">
+                <strong>Email invalide </strong> 
             </div>
             <?php
             break;
@@ -27,8 +27,8 @@ if (isset($_GET['login_erreur'])) {
             case 'compte':
             ?>
           
-            <div class="alert alert-success">
-                <strong>Erreur: </strong> Vous n'avez pas de compte
+            <div class="alert alert-danger">
+                <strong>Vous n'avez pas de compte</strong> 
             </div>
             <?php
             break;
