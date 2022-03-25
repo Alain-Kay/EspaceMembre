@@ -13,11 +13,12 @@ if (isset($nom)  && isset($pseudo) && isset($email) && isset($pass) && isset($pa
 
   $chek = $db->prepare('SELECT nom, pseudo, email, pass, pass2 FROM users where  email = ?');
   $chek->execute(array($email));
+  $chek->execute(array($pseudo));
   $data = $chek->fetch();
   $row = $chek->rowCount();
   if($row == 0 ){
-      if (strlen($nom) <100 ) {
-              if (strlen($pseudo) <100 ) {
+      if (strlen($nom) > 3 ) {
+              if (strlen($pseudo) > 3 ) {
                   if (!empty($email) && filter_var($email, FILTER_VALIDATE_EMAIL)) {
                       if (strlen($pass) >= 5 || strlen($pass2) >= 5 ) {
                           if ($pass == $pass2) {
@@ -39,7 +40,7 @@ if (isset($nom)  && isset($pseudo) && isset($email) && isset($pass) && isset($pa
                   }else
                     redirection('../inscription.php?erreur=email_non_valide');
               }else
-                redirection('../inscription.php?erreur=taiile_pseudo_et_non_numeri');    
+                redirection('../inscription.php?erreur=taiile_pseudo');    
       }else
         redirection('../inscription.php?erreur=taille_nom_et_non_numeric ');
   }else

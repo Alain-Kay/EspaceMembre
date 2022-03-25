@@ -1,11 +1,12 @@
 <?php 
 require_once "_inc/header.php";
+require_once "_funcs/function.php";
 $title = "inscription"; 
 
 ?>
   <?php 
     if(isset($_GET['erreur'])){
-      $erreur  = htmlspecialchars($_GET['erreur']);
+      $erreur  = al($_GET['erreur']);
       switch($erreur)
       {
         case  'succes':
@@ -16,14 +17,6 @@ $title = "inscription";
                   </div>
           <?php
           break; 
-
-        case 'champ_vide':
-          ?>
-            <div class="alert alert-warning">
-              <strong>Erreur: </strong> vos champs sont vides
-            </div>
-          <?php
-          break;
           case 'utilisateur_existe':
             ?>
               <div class="alert alert-warning">
@@ -38,14 +31,7 @@ $title = "inscription";
                 </div>
               <?php
               break;
-              case 'taille_prenom_et_non_numeric':
-                ?>
-                  <div class="alert alert-warning">
-                    <strong>Erreur: </strong> Prenom incorrect
-                  </div>
-                <?php
-                break;
-              case 'taille_pseudo_et_non_numeric ':
+              case 'taille_pseudo':
                 ?>
                   <div class="alert alert-warning">
                     <strong>Erreur: </strong>Pseudo inccorect
@@ -90,9 +76,12 @@ $title = "inscription";
                 <input type="email" name="email" class="form-control " placeholder="email" autocomplete="on">
             </div>
             <div class="form-group">
-               <input type="password" name="pass" class="form-control" placeholder="password" autocomplete="on">
-               <input type="password" name="pass2" class="form-control" placeholder="password" autocomplete="on">
-          </div>
+                  <input type="password" name="pass" class="form-control" placeholder="password" autocomplete="on">
+            </div>
+               <div class="form-group">
+                  <input type="password" name="pass2" class="form-control" placeholder="password" autocomplete="on">
+          
+              </div>
           <div class="form-group">
               <button type="submit" class="btn btn-primary mb-3" name="register">Envoyer</button>
           </div>
