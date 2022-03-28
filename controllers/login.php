@@ -14,14 +14,14 @@ if(isset($_POST['login'])){
         $row = $check->rowCount();
         if ($row == 1) {
             if (filter_var($email, FILTER_VALIDATE_EMAIL)) {
-                // $hash = password_hash($pass,   PASSWORD_BCRYPT);
-                if ($data['pass2'] === $pass) {
+                $hash = password_hash($pass,   PASSWORD_BCRYPT);
+                if ($data['pass'] === $hash) {
                     $_SESSION['user'] = $data['pseudo'];
-                    redirection('../profil.php');
+                    redirection('../profile.php');
                     
-                }else redirection('../connexion.php?login_erreur=password') ;
-            }else redirection('../connexion.php?login_erreur=email');
-        }else redirection('../connexion.php?login_erreur=compte');
-    }else redirection('../connexion.php');
+                }else redirection('../login.php?login_erreur=password') ;
+            }else redirection('../login.php?login_erreur=email');
+        }else redirection('../login.php?login_erreur=compte');
+    }else redirection('../login.php');
     
 }

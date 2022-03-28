@@ -31,18 +31,18 @@ if (isset($nom)  && isset($pseudo) && isset($email) && isset($pass) && isset($pa
                                         'pass' => $hash,
                                         'pass2' => $pass2                
                                         )); 
-                            redirection('../inscription.php?erreur=succes');
+                            redirection('../register.php?erreur=succes');
                           }else
-                            redirection('../inscription.php?erreur=mot_de_passe_different');  
+                            redirection('../register.php?erreur=mot_de_passe_different');  
                       }else
-                       redirection('../inscription.php?erreur=taille_mot_de_passe'); 
+                       redirection('../register.php?erreur=taille_mot_de_passe'); 
                   }else
-                    redirection('../inscription.php?erreur=email_non_valide');
+                    redirection('../register.php?erreur=email_non_valide');
               }else
-                redirection('../inscription.php?erreur=taiile_pseudo');    
+                redirection('../register.php?erreur=taiile_pseudo');    
       }else
-        redirection('../inscription.php?erreur=taille_nom_et_non_numeric ');
+        redirection('../register.php?erreur=taille_nom_et_non_numeric ');
   }else
-    redirection('../inscription.php?erreur=utilisateur_existe');
+    redirection('../register.php?erreur=utilisateur_existe');
   }else
-    redirection('../inscription.php?erreur=utilisateur_existe');
+    redirection('../register.php?erreur=utilisateur_existe');
