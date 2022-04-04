@@ -24,7 +24,7 @@ $title = "inscription";
               </div>
             <?php
             break;
-            case 'taille nom_et_non_numeric ':
+            case 'taille_nom':
               ?>
                 <div class="alert alert-warning">
                   <strong>Erreur: </strong> Nom incorrect
@@ -52,10 +52,17 @@ $title = "inscription";
                       </div>
                     <?php
                     break;
-                    case 'mot_de_passe_different ':
+                    case 'motdepasse_different ':
                       ?>
                         <div class="alert alert-warning">
                           <strong>Erreur: </strong>Mot de passe different
+                        </div>
+                      <?php
+                      break;
+                    default:
+                      ?>
+                        <div class="alert alert-warning">
+                          <strong>Erreur: </strong>Remplir tout les champs
                         </div>
                       <?php
                       break;
@@ -63,30 +70,32 @@ $title = "inscription";
       }
     }
   ?>
-<div class="login-form">
-    <form action="controllers/register.php" method="post">
-        <h2 class="text-center">Inscription</h2>
-            <div class="form-group">
-                <input type="text" name="nom" class="form-control " placeholder="nom" autocomplete="on">
-            </div>
-            <div class="form-group">
-                <input type="text" name="pseudo" class="form-control" placeholder="pseudo" autocomplete="on">
-            </div>
-            <div class="form-group">
-                <input type="email" name="email" class="form-control " placeholder="email" autocomplete="on">
-            </div>
-            <div class="form-group">
-                  <input type="password" name="pass" class="form-control" placeholder="password" autocomplete="on">
-            </div>
-               <div class="form-group">
-                  <input type="password" name="pass2" class="form-control" placeholder="password" autocomplete="on">
-          
+  <div class="login-form">
+      <form action="controllers/register.php" method="post">
+          <h2 class="text-center">Inscription</h2>
+              <div class="form-group">
+                  <input type="text" name="nom" class="form-control " placeholder="nom" autocomplete="on">
               </div>
-          <div class="form-group">
-              <button type="submit" class="btn btn-primary mb-3" name="register">Envoyer</button>
-          </div>
-      </form>
-</div>
+              <div class="form-group">
+                  <input type="text" name="pseudo" class="form-control" placeholder="pseudo" autocomplete="on">
+              </div>
+              <div class="form-group">
+                  <input type="email" name="email" class="form-control " placeholder="email" autocomplete="on">
+              </div>
+              <div class="form-group">
+                    <input type="password" name="pass" class="form-control" placeholder="password" autocomplete="on">
+              </div>
+                <div class="form-group">
+                    <input type="password" name="pass2" class="form-control" placeholder="password" autocomplete="on">
+            
+                </div>
+            <div class="form-group">
+                <button type="submit" class="btn btn-primary mb-3" name="register">Envoyer</button>
+            </div>
+        </form>
+        <p class="text-center"><a href="login.php" class="bg-secondary text-white">Connexion</a></p>
+  </div>
+
 
   
   

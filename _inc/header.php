@@ -6,6 +6,7 @@
   <title><?php $title; ?></title>
 </head>
 <body>
+<div class="bg-image card shadow-1-strong fond"> 
   <style>
     .login-form{
       width: 400px;
@@ -21,6 +22,7 @@
       background : #f9f9f9f9;
       box-shadow: 0px 2px 2px rgba(1, 1, 1, 0.3);
       padding: 30px;
+      opacity: 0.70;
 
     }
 
@@ -48,4 +50,15 @@
     body{
       background : #f7f7f7f7;
     }
+    .fond{
+      background-image: url('images/3.jpg');
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+     -o-background-size: cover;
+      background-size: cover;
+      width: 100%;
+      height: 700px;
+      
+    }
+   
   </style>

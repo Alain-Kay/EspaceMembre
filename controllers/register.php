@@ -33,7 +33,7 @@ if (isset($nom)  && isset($pseudo) && isset($email) && isset($pass) && isset($pa
                                         )); 
                             redirection('../register.php?erreur=succes');
                           }else
-                            redirection('../register.php?erreur=mot_de_passe_different');  
+                            redirection('../register.php?erreur=motdepasse_different');  
                       }else
                        redirection('../register.php?erreur=taille_mot_de_passe'); 
                   }else
@@ -41,8 +41,9 @@ if (isset($nom)  && isset($pseudo) && isset($email) && isset($pass) && isset($pa
               }else
                 redirection('../register.php?erreur=taiile_pseudo');    
       }else
-        redirection('../register.php?erreur=taille_nom_et_non_numeric ');
+        redirection('../register.php?erreur=taille_nom');
   }else
     redirection('../register.php?erreur=utilisateur_existe');
-  }else
-    redirection('../register.php?erreur=utilisateur_existe');
+  }else {
+    redirection('../register.php?erreur=champ');
+  }
